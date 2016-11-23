@@ -10,7 +10,7 @@ puts "Seed in progress ..."
 10.times do
 
   name         = Faker::Company.name
-  phone_number = Faker::PhoneNumber
+  phone_number = Faker::PhoneNumber.phone_number
   address      = Faker::Address.street_address
   category     = ["chinese", "italian", "japanese", "french", "belgian"].sample
   Restaurant.create(

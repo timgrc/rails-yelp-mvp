@@ -1,1 +1,13 @@
-index.html.erb
+<%= link_to "Créer un restaurant", new_restaurant_path, class:'btn btn-success' %><br>
+<% @restaurants.each do |restaurant| %>
+  <%= restaurant.name %>
+  <br>
+  <%= restaurant.address %>
+  <br>
+  <%= restaurant.phone_number %>
+  <br>
+  <%= restaurant.category %>
+  <br>
+  <%= link_to "Show the restaurant", restaurant_path(restaurant), class:'btn btn-primary' %>
+  <br><br>
+<% end %>

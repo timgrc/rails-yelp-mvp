@@ -1,0 +1,18 @@
+Nom : <%= @restaurant.name %>
+<br>
+Adresse : <%= @restaurant.address %>
+<br>
+Téléphone : <%= @restaurant.phone_number %>
+<br>
+Catégorie : <%= @restaurant.category %>
+<br><br>
+<% @restaurant.reviews.all.each do |review| %>
+  Contenu : <%= review.content %>
+  <br>
+  Évaluation : <%= review.rating %>
+  <br><br>
+<% end %>
+<br>
+<%= link_to "Créer une review", new_restaurant_review_path(@restaurant), class:'btn btn-primary' %>
+<br><br>
+<%= link_to "Revenir sur la liste", restaurants_path, class:'btn btn-success' %>
